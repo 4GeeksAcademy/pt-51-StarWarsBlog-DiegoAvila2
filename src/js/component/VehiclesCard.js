@@ -10,13 +10,13 @@ export const VehiclesCard = props => {
 	
     return (
 
-        <div className="card" style={{Width: "100px"}}>
+        <div className="card h-100 w-75">
             <img src={`https://starwars-visualguide.com/assets/img/vehicles/${props.id}.jpg`} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
             </div>
             <div className="card-body">
-                <Link to="/single">
+                <Link to={`/single/${props.id}`}>
                     <boton tipe="click" onClick="" className="card-link">Detalles</boton>
                 </Link>
                 <Link to="/">

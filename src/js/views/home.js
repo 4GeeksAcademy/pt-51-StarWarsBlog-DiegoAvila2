@@ -19,21 +19,20 @@ export const Home = () => {
 	return (
 	
 		<div className="container mt-5">
-		<div className="row">
 			<h1 className="text-danger mb-3 p-3">Personajes</h1>
-					<ul className="flex-nowrap d-flex flex-row overflow-scroll list-unstyled gap-1 px-0">
-						{store.characters.map(item => (
-							<li className="col-4 px-0 w-auto my-2">
-								<CharacterCard key={item.uid} id={item.uid} name={item.name} />
-								
-							</li>
-							))}
-					</ul>
-		</div>
+			<div className="col-12">
+				<ul className="flex-nowrap d-flex flex-row overflow-scroll list-unstyled gap-1 px-0">
+					{store.characters.map(item => (
+						<li className="col-4 px-0 w-auto my-2">
+							<CharacterCard key={item.uid} id={item.uid} name={item.name} />
+						</li>
+					))}
+				</ul>
+			</div>
 		<h1 className="text-danger mb-3">Planetas</h1> 
 			<div className="row d-flex flex-row mb-3 ">
 				<div className="col-12">
-				<ul className="list-group d-flex flex-row overflow-scroll">
+				<ul className="flex-nowrap d-flex flex-row overflow-scroll list-unstyled gap-1 px-0">
 				{store.planets.map(item => (
 					<li className="col-4 px-0 w-auto my-2">
 						<PlanetCard key={item.uid} id={item.uid}  name={item.name} />
@@ -46,7 +45,7 @@ export const Home = () => {
 			<h1 className="text-danger mb-3">Vehiculos</h1> 
 			<div className="row d-flex flex-row mb-3 ">
 				<div className="col-12">
-				<ul className="list-group d-flex flex-row overflow-scroll">
+				<ul className="flex-nowrap d-flex flex-row overflow-scroll list-unstyled gap-1 px-0">
 				{store.vehicles.map(item => (
 					<li  className="col-4 px-0 w-auto my-2">
 						<VehiclesCard key={item.uid} id={item.uid}  name={item.name} />

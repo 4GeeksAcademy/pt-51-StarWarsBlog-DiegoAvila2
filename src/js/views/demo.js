@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
+import { DetailsCard } from "../component/DetailsCard";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
-			<ul className="list-group">
+			<DetailsCard/>
+			{/* <ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
 						<li
@@ -34,7 +36,7 @@ export const Demo = () => {
 					);
 				})}
 			</ul>
-			<br />
+			<br /> */}
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
 			</Link>
